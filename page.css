@@ -1,0 +1,164 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;}
+h1, h2, h3 { color: #333;}
+p {    color: #555;}
+a {
+    color: #007BFF;
+    text-decoration: none;}
+a:hover {text-decoration: underline;}
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;}
+header h1 {
+    margin: 0;
+    text-align: center;}
+header nav {
+    text-align: center;}
+header nav ul {
+    list-style: none;
+    padding: 0;}
+header nav ul li {
+    display: inline;
+    margin: 0 10px;}
+header nav ul li a {
+    color: white;
+    font-size: 18px;}
+.section {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px;}
+#about {
+    background-color: #e9ecef;}
+#projects .project {
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;}
+.cv-container {
+    width: 100%; /* S'adapte à la largeur disponible */
+    max-width: 700px; /* Limite à une largeur confortable */
+    height: auto; /* Maintient le ratio */
+    margin: 0 auto; /* Centrage horizontal */
+    border: 1px solid #ddd; /* Optionnel : ajouter une bordure */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : effet d'ombre */
+    overflow: hidden; /* Empêche le dépassement du contenu */
+    background-color: #fff; /* Couleur de fond blanche */}
+.cv-container img {
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    height: auto; /* Conserve le ratio original */
+    display: block; /* Évite les espaces blancs */}
+@media (max-width: 768px) {
+    .cv-container {
+        max-width: 100%; /* Utilise toute la largeur sur mobile */
+        margin: 0 10px; /* Ajoute un peu d'espace sur les côtés */
+    }}
+video {
+    max-width: 800px; /* Largeur maximale pour une meilleure lisibilité */
+    border: 1px solid #ddd; /* Bordure fine autour de la vidéo */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+    margin: 20px auto; /* Centrer la vidéo */
+    display: block; /* S'assurer qu'elle s'aligne correctement */}
+.video-cv {
+    max-width: 600px; /* Limite la largeur à 600px */
+    width: 100%; /* Utilise toute la largeur disponible jusqu'à 600px */
+    height: 500px; /* Laisse la hauteur s'ajuster automatiquement pour maintenir le ratio */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centre la vidéo horizontalement */}
+#cv {
+    background-color: #e9ecef; /* Applique une couleur de fond gris foncé */
+    color: white; /* Change la couleur du texte en blanc pour qu'il soit lisible */
+    padding: 20px; /* Ajoute de l'espace autour du contenu */}
+#contact {
+    background-color: #e9ecef;}
+nav ul li a {
+    font-size: 16px; /* Taille de texte initiale */
+    transition: font-size 0.3s ease;}
+nav ul li a:hover {
+    font-size: 20px; /* Agrandit la taille du texte lorsque le curseur est sur le lien */}
+header img {
+    width: 150px; /* Ajustez la largeur de l'image selon vos besoins */
+    height: 150px; /* Assurez-vous que la hauteur est égale à la largeur pour un cercle parfait */
+    border-radius: 50%; /* Rend l'image ronde */
+    object-fit: cover; /* S'assure que l'image couvre entièrement le cercle sans être déformée */}
+header {
+    display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Aligne l'image et les liens verticalement au centre */
+    padding: 20px; /* Ajoute un peu d'espace autour */}
+header .logo {
+    margin-right: 20px; /* Ajoute un petit espace entre l'image et les liens */}
+header img {
+    width: 150px; /* Taille de l'image */
+    height: 150px; /* Assurez-vous que la hauteur est égale à la largeur pour un cercle parfait */
+    border-radius: 50%; /* Rend l'image ronde */
+    object-fit: cover; /* Assure que l'image couvre bien le cercle sans être déformée */}
+nav {
+    flex-grow: 1; /* Permet aux liens de prendre tout l'espace restant */
+    display: flex; /* Aligne les éléments de la liste horizontalement */
+    justify-content: center; /* Centre les éléments horizontalement */}
+nav ul {
+    display: flex; /* Aligne les éléments de la liste horizontalement */
+    list-style-type: none; /* Retire les puces de la liste */
+    padding: 0; /* Retire le padding de la liste */}
+nav ul li {
+    margin: 0 15px; /* Espace entre les éléments de la navigation */}
+nav ul li a {
+    text-decoration: none; /* Retire le soulignement des liens */
+    color: #333; /* Couleur des liens */
+    font-size: 16px; /* Taille des liens */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */}
+nav ul li a {
+    transition: transform 0.3s ease, color 0.3s ease;}
+nav ul li a:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+    color: #8da6c2;}
+#downcv {
+    display: flex; /* Utilise flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100px; /* Hauteur de la section */
+    background-color: #f5f5f5; /* Couleur de fond légèrement grise */}
+#downcv a {
+    text-decoration: none; /* Retire le soulignement */
+    color: #555; /* Couleur grise pour le texte */
+    font-size: 18px; /* Taille de texte initiale */
+    font-weight: bold; /* Texte en gras */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Animation pour le survol */}
+#downcv a:hover {
+    font-size: 22px; /* Agrandit légèrement le texte */
+    color: #333; /* Couleur un peu plus foncée au survol */}
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
