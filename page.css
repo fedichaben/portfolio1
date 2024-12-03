@@ -16,23 +16,72 @@ a {
     text-decoration: none;}
 a:hover {text-decoration: underline;}
 header {
-    background-color: #333;
+    background-color: #333;  
     color: white;
-    padding: 20px 0;}
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Répartir le titre et la navigation */
+    align-items: center; /* Aligner les éléments verticalement */
+    padding: 0 20px; /* Espacement à gauche et à droite */
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser en cas de débordement */
+}
+
 header h1 {
     margin: 0;
-    text-align: center;}
+    font-size: 28px; /* Taille plus grande pour le titre */
+    text-align: left; /* Aligner le titre à gauche */
+    flex: 1; /* Laisser le titre prendre l'espace restant */
+    white-space: nowrap; /* Empêche le texte de se couper ou de se réorganiser */
+    overflow: hidden; /* Cacher le texte qui déborde */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+}
+
 header nav {
-    text-align: center;}
+    display: flex;
+    justify-content: center; /* Centrer les liens de navigation */
+    flex-grow: 1;
+    flex-wrap: wrap; /* Permet à la navigation de se réorganiser sur plusieurs lignes si nécessaire */
+}
+
 header nav ul {
     list-style: none;
-    padding: 0;}
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permet à la liste de se réorganiser */
+    justify-content: center; /* Centrer les éléments de la liste */
+}
+
 header nav ul li {
-    display: inline;
-    margin: 0 10px;}
+    margin: 0 15px; /* Augmenter l'espacement entre les éléments */
+}
+
 header nav ul li a {
     color: white;
-    font-size: 18px;}
+    font-size: 18px;
+    text-decoration: none; /* Supprimer le soulignement */
+    transition: color 0.3s ease, transform 0.3s ease; /* Ajout d'une transition pour l'effet de survol */
+}
+
+header nav ul li a:hover {
+    color: #ff9800; /* Changer la couleur au survol */
+    transform: scale(1.1); /* Agrandir légèrement le lien */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px; /* Réduire la taille du titre sur les petits écrans */
+        text-align: center; /* Centrer le titre sur les petits écrans */
+    }
+
+    header nav ul li {
+        margin: 5px 10px; /* Réduire l'espacement entre les éléments du menu */
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Réduire la taille des liens sur les petits écrans */
+    }
+}
+
 .section {
     padding: 40px 0;
     background-color: #fff;
@@ -154,6 +203,208 @@ nav ul li a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+/* Container */
+.competences {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Compétence individuelle */
+.competence {
+    text-align: center;
+}
+
+/* Cercle pour chaque compétence */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #e0e0e0;
+    position: relative;
+    margin: 0 auto;
+    background: conic-gradient(#4caf50 calc(var(--percent) * 1%), #e0e0e0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #333;
+    transition: background 1s ease-in-out;
+}
+
+/* Texte à l'intérieur du cercle */
+.circle p {
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Animation de l'affichage des cercles avec les pourcentages */
+.competence p {
+    margin-top: 10px;
+}
+
+#centres-interets {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+#centres-interets h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#centres-interets ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#centres-interets ul li {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.photos-centres {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ajoute cette ligne pour permettre aux images de passer à la ligne suivante */
+    margin-top: 20px;
+}
+
+.photos-centres img {
+    width: 150px; /* Largeur des images */
+    height: 150px; /* Hauteur des images */
+    object-fit: cover; /* Pour que l'image couvre le cadre sans déformation */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Espacement entre les images sur la même ligne */
+}
+/* Style pour les h2 dans chaque section */
+.section h2 {
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 0; /* Supprime les marges par défaut autour du h2 */
+    padding: 20px 0; /* Ajouter de l'espace autour du titre */
+    font-size: 24px; /* Taille du texte du titre */
+    color: #333; /* Couleur du texte */
+}
+
+/* Option pour centrer les éléments dans un conteneur */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tout le contenu de la section horizontalement */
+    justify-content: center; /* Centre le contenu verticalement si nécessaire */
+}
+
+/* Si tu veux appliquer ça à une section spécifique, par exemple #about */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    text-align: center; /* Centre le texte */
+    padding: 40px 0; /* Padding pour donner de l'espace autour */
+}
+#contact {
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    padding: 60px 20px; /* Espaces autour de la section */
+    text-align: center; /* Centrer tout le contenu */
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto; /* Centrer le formulaire */
+}
+
+.contact-form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form .form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    border-color: #007BFF; /* Changer la couleur de la bordure lors du focus */
+}
+
+.contact-form .form-group textarea {
+    height: 150px; /* Hauteur de la zone de texte */
+    resize: vertical; /* Permet de redimensionner la zone de texte */
+}
+
+.contact-form .submit-btn {
+    background-color: #007BFF; /* Couleur du bouton */
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 15px;
+    }
+    
+    #contact h2 {
+        font-size: 28px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
 
 
 

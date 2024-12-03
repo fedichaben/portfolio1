@@ -6,3 +6,13 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+// Attendre que le DOM soit prêt
+document.addEventListener("DOMContentLoaded", function () {
+    const circles = document.querySelectorAll('.circle');
+    
+    // Pour chaque cercle, on met à jour son pourcentage
+    circles.forEach(circle => {
+        const percent = circle.getAttribute('data-percent');
+        circle.style.setProperty('--percent', percent); // Applique le pourcentage
+    });
+});
